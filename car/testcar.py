@@ -24,8 +24,8 @@ class CarClassTest(unittest.TestCase):
     def test_car_properties(self):
         toyota = Car('Toyota', 'Corolla')
         self.assertListEqual(['Toyota', 'Corolla'],
-                             [toyota.name, toyota.model],
-                             msg='The car name and model should be a property of the car')
+                             [toyota.name, toyota.model])
+                             #msg='The car name and model should be a property of the car')
 
     def test_car_doors(self):
         opel = Car('Opel', 'Omega 3')
@@ -33,14 +33,14 @@ class CarClassTest(unittest.TestCase):
         self.assertListEqual([opel.num_of_doors,
                              porshe.num_of_doors,
                              Car('Koenigsegg', 'Agera R').num_of_doors],
-                             [4, 2, 2],
-                             msg='The car shoud have four (4) doors except its a Porshe or Koenigsegg')
+                             [4, 2, 2])
+                             #msg='The car shoud have four (4) doors except its a Porshe or Koenigsegg')
 
     def test_car_wheels(self):
         man = Car('MAN', 'Truck', 'trailer')
         koenigsegg = Car('Koenigsegg', 'Agera R')
-        self.assertEqual([8, 4], [man.num_of_wheels, koenigsegg.num_of_wheels],
-                         msg='The car shoud have four (4) wheels except its a type of trailer')
+        self.assertEqual([8, 4], [man.num_of_wheels, koenigsegg.num_of_wheels])
+                         #msg='The car shoud have four (4) wheels except its a type of trailer')
 
     def test_car_type(self):
         koenigsegg = Car('Koenigsegg', 'Agera R')
@@ -53,8 +53,8 @@ class CarClassTest(unittest.TestCase):
         moving_speed = man.drive(7).speed
 
         self.assertListEqual([parked_speed, moving_speed],
-                             [0, 77],
-                             msg='The Trailer should have speed 0 km/h until you put `the pedal to the metal`')
+                             [0, 77])
+                             #msg='The Trailer should have speed 0 km/h until you put `the pedal to the metal`')
 
     def test_car_speed2(self):
         man = Car('Mercedes', 'SLR500')
