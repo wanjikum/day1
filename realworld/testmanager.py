@@ -4,6 +4,7 @@ class methods and static methods
 """
 
 import unittest
+import datetime
 from manager import Manager
 from person import Person
 
@@ -26,8 +27,8 @@ class TestClassManager(unittest.TestCase):
 
     def test_object_type_is_a_type_of_manager(self):
         """Tests if the object is of type `Person`"""
-        woman = Manager()
-        self.assertTrue((type(man) is Person))
+        man = Manager()
+        self.assertFalse((type(man) is Person))
 
     def test_default_gender(self):
         """Tests if the default gender is female"""
