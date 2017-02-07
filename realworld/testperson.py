@@ -31,12 +31,12 @@ class PersonClassTest(unittest.TestCase):
     def test_if_a_person_name_is_correct(self):
         """Test if the person name comprised of the first name and second name"""
         paul = Person('Paul', 'Othis')
-        self.assertEqual('I am Paul Othis', paul.full_name)
+        self.assertEqual('I am Paul Othis', paul.full_name())
 
     def test_if_it_outputs_correct_gender(self):
         """Test if it returns true if persons gender is female"""
-        boot = Person('henry', 'boot', 'male')
-        self.assertTrue(boot.is_female())
+        step = Person('steph', 'wafula', 'F')
+        self.assertTrue(step.is_female())
 
     def test_age_data_can_be_set(self):
         """Test if it sets the age to 40 and accepts datatype int"""
@@ -49,9 +49,9 @@ class PersonClassTest(unittest.TestCase):
         self.assertEqual('forty', fatuma.set_age('forty'))
 
     def test_if_pay_is_an_attribute(self):
-    	"""Tests if the attribut default value is 50000"""
+    	"""Tests if the attribute default value is 50000"""
     	jane = Person()
-    	self.assertEqual(50000, jane.person)
+    	self.assertEqual(50000, jane.pay)
 
 
 
