@@ -62,8 +62,8 @@ class CarClassTest(unittest.TestCase):
         moving_speed = man.drive(3).speed
 
         self.assertListEqual([parked_speed, moving_speed],
-                             [0, 1000],
-                             msg='The Mercedes should have speed 0 km/h until you put `the pedal to the metal`')
+                             [0, 1000])
+                             #msg='The Mercedes should have speed 0 km/h until you put `the pedal to the metal`')
 
     def test_drive_car(self):
         man = Car('MAN', 'Truck', 'trailer')
